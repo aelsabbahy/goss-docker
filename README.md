@@ -22,7 +22,7 @@ In your `Dockerfile` use the `onbuild` container as follows:
 * To serve a healthz endpoint
 ```
 FROM aelsabbahy/goss:onbuild
-CMD ["validate", "--retry-timeout", "5m"]
+CMD ["serve"]
 ```
 
 * To keep running tests until they pass or we timeout
@@ -35,7 +35,7 @@ CMD ["validate", "--retry-timeout", "5m", "--sleep", "10s"]
 
 This is a simple alpine image with Goss preinstalled on it. Can be used as a base image for your projects to allow for easy health checking.
 
-Example:
+HEALTHCHECK example:
 ```
 FROM aelsabbahy/goss:latest
 
@@ -43,4 +43,15 @@ COPY goss/ /goss/
 HEALTHCHECK --interval=1s --timeout=6s CMD goss -g /goss/goss.yaml validate
 
 # your stuff..
+```
+
+Startup delay example:
+```
+FROM aelsabbahy/goss:latest
+
+COPY goss/ /goss/
+
+# Alternatively, the -r option can be set
+# using the GOSS_RETRY_TIMEOUT env variable
+CMD goss -g /goss/goss.yaml validate -r 5m && exec real_comand..
 ```
