@@ -8,7 +8,7 @@
 Not sure what Goss is, read these:
 
 * [Goss](https://github.com/aelsabbahy/goss) - Project page
-* [Blog post](https://medium.com/p/fa8debbe676c) - Examples on how these Goss images can be used
+* [Blog post](https://medium.com/@aelsabbahy/docker-1-12-kubernetes-simplified-health-checks-and-container-ordering-with-goss-fa8debbe676c) - Examples on how these Goss images can be used
 
 
 ## Using the base image
