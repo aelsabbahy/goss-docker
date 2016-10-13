@@ -15,6 +15,20 @@ Not sure what Goss is, read these:
 
 This is a simple alpine image with Goss preinstalled on it. Can be used as a base image for your projects to allow for easy health checking.
 
+### Mount example
+
+Create the container
+```
+docker run --name goss aelsabbahy/goss goss
+```
+Create your container and mount goss
+```
+docker run --rm -it --volumes-from goss --name weby nginx
+```
+Run goss inside your container
+```
+docker exec weby /goss/goss autoadd nginx
+```
 
 ### HEALTHCHECK example
 ```
