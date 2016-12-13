@@ -1,7 +1,7 @@
 FROM alpine:3.4
 MAINTAINER Ahmed Elsabbahy <elsabbahyahmed@yahoo.com>
 
-ENV GOSS_VER v0.2.4
+ENV GOSS_VER v0.2.5
 
 # Install goss
 RUN apk add --no-cache --virtual=goss-dependencies curl ca-certificates && \
