@@ -12,6 +12,8 @@ RUN apk add --no-cache --virtual=goss-dependencies curl ca-certificates && \
     curl -fsSL https://goss.rocks/install | GOSS_DST=/goss sh && \
     apk del goss-dependencies
 
+COPY /goss-on-host /goss-on-host
+
 VOLUME /goss
 
 # Easily add healtchecks to your image
