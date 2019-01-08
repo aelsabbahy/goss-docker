@@ -1,6 +1,8 @@
 FROM alpine:3.4
 MAINTAINER Ahmed Elsabbahy <elsabbahyahmed@yahoo.com>
 
+LABEL RUN="docker run -it --name NAME --privileged --ipc=host --net=host --pid=host -e HOST=/host -e NAME=NAME -e IMAGE=IMAGE -v /run:/run -v /var/log:/var/log -v /etc/localtime:/etc/localtime -v /:/host -v /tmp/goss:/goss IMAGE"
+
 ENV GOSS_VER v0.3.6
 ENV PATH=/goss:$PATH
 

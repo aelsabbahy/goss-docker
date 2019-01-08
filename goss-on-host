@@ -1,0 +1,1 @@
+nsenter --mount=/host/proc/1/ns/mnt -- /tmp/goss $@  
