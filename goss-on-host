@@ -1,1 +1,6 @@
-nsenter --mount=/host/proc/1/ns/mnt -- /tmp/goss $@  
+if [ ! -f /tmp/goss ]; then
+   mkdir -p /tmp/goss
+   cp /goss/goss /tmp/goss
+fi
+
+nsenter --mount=/host/proc/1/ns/mnt -- /tmp/goss $@
