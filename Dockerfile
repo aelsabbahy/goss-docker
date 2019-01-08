@@ -14,7 +14,7 @@ RUN apk add --no-cache --virtual=goss-dependencies curl ca-certificates && \
 
 COPY /goss-on-host /
 
-VOLUME /goss
+# VOLUME /goss
 
 # Easily add healtchecks to your image
 # COPY goss/ /goss/
