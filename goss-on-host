@@ -2,9 +2,8 @@
 
 stamp=$(stat -c %Y .dockerenv)
 
-if [ ! -f /host/tmp/goss/goss ]; then
-
-   mkdir -p /host/tmp/goss
+if [ ! -d /host/tmp/goss-bin-$stamp ]; then
+   mkdir -p /host/tmp/goss-bin-$stamp
    cp -R /goss/* /host/tmp/goss-bin-$stamp
 fi
 
