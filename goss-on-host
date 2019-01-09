@@ -1,6 +1,11 @@
+#!/bin/sh
+
+stamp=$(stat -c %Y .dockerenv)
+
 if [ ! -f /host/tmp/goss/goss ]; then
+
    mkdir -p /host/tmp/goss
-   cp -R /goss/* /host/tmp/goss
+   cp -R /goss/* /host/tmp/goss-bin-$stamp
 fi
 
-nsenter --mount=/host/proc/1/ns/mnt -- /tmp/goss/goss $@
+nsenter --mount=/host/proc/1/ns/mnt -- /tmp/goss-bin-$stamp/goss $@
