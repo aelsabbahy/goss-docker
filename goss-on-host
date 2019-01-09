@@ -1,6 +1,6 @@
-if [ ! -f /tmp/goss ]; then
-   mkdir -p /tmp/goss
-   cp /goss/goss /tmp/goss
+if [ ! -f /host/tmp/goss/goss ]; then
+   mkdir -p /host/tmp/goss
+   cp -R /goss/* /host/tmp/goss
 fi
 
-nsenter --mount=/host/proc/1/ns/mnt -- /tmp/goss $@
+nsenter --mount=/host/proc/1/ns/mnt -- /tmp/goss/goss $@
