@@ -1,6 +1,6 @@
 #!/bin/sh
 
-stamp=$(stat -c %Y .dockerenv)
+stamp=$(stat -c %Y /.dockerenv)
 
 if [ ! -d /host/tmp/goss-bin-$stamp ]; then
    mkdir -p /host/tmp/goss-bin-$stamp
