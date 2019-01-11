@@ -19,3 +19,5 @@ Not sure what Goss is, read these:
 
 ## Status
 It works, one-shot invocation seems kind of slow.
+
+## Example Scripts - see [wiki](https://github.com/keithy/atomic-host-goss/wiki)
