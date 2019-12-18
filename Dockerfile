@@ -1,7 +1,7 @@
 FROM alpine:3.10
 MAINTAINER Ahmed Elsabbahy <elsabbahyahmed@yahoo.com>
 
-ENV GOSS_VER v0.3.8
+ENV GOSS_VER v0.3.9
 ENV PATH=/goss:$PATH
 
 # Install goss
